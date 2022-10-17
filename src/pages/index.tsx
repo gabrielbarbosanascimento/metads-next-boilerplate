@@ -1,43 +1,29 @@
-import { useRouter } from 'next/router';
-import {
-  MetaAccordion,
-  MetaButton,
-  MetaButtonIcon,
-  MetaDragDrop,
-  MetaDropDown,
-  MetaIcon,
-  MetaInput,
-  MetaObscurator,
-  MetaPaginatedTable,
-  MetaSelect,
-  MetaSkeleton,
-  MetaTable,
-  MetaTooltip,
-} from '../../core/metads/components';
-import { Switch } from '../../core/metads/components/switch/switch';
-import { MetaHeading } from '../../core/metads/typography';
+import { MetaHeading, MetaSubtitle } from '../../core/metads/typography';
+import { motion } from 'framer-motion';
 
 export default function Home() {
-  const router = useRouter();
-
   return (
     <div className="p-5">
-      <MetaHeading data-tip="oi">Pagina inicial</MetaHeading>
-      <MetaDropDown>
-        <div className="dropdown-item">oi</div>
-      </MetaDropDown>
-      <div>
-        <div className="m-link" onClick={() => router.push('/formulario')}>
-          Ir para formulário
-        </div>
-      </div>
-      <div>
-        <div className="m-link" onClick={() => router.push('/exemplos')}>
-          Ir para rota de exemplos
-        </div>
-      </div>
-      <div className="m-link" onClick={() => router.push('/private')}>
-        Ir para rota privada (vai voltar para o mesmo lugar)
+      <div
+        style={{ height: '100vh' }}
+        className="d-flex flex-column justify-content-center align-items-center"
+      >
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 2, delay: 0 }}
+          className="d-flex justify-content-center align-items-center"
+        >
+          <MetaHeading>Projeto Meta DS </MetaHeading>
+        </motion.div>
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: .6 }}
+          transition={{ duration: 2, delay: 0.3 }}
+          className="d-flex justify-content-center align-items-center"
+        >
+          <MetaSubtitle>Gabriel Nascimento</MetaSubtitle>
+        </motion.div>
       </div>
     </div>
   );
