@@ -12,10 +12,14 @@ import {
 export default createGlobalStyle`
   body {
     margin: 0 auto;
-    font-family: 'Archivo', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  html, body {
+    font-size: 16px
   }
 
   html {

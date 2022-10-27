@@ -9,15 +9,17 @@ type LINE_HEIGHT = {
 };
 
 type SIZE = {
-  XXXS: '9px';
-  XXS: '12px';
-  XS: '16px';
-  SM: '21.33px';
-  MD: '28.43px';
-  LG: '37.9px';
-  XL: '50.52px';
-  XXL: '67.34px';
-  DISPLAY: '89.76px';
+  XXXS: string;
+  XXS: string;
+  XS: string;
+  SM: string;
+  MD: string;
+  LG: string;
+  XL: string;
+  XXL: string;
+  XXXL: string;
+  DISPLAY: string;
+  GIANT: string;
 };
 
 type WEIGHT = {
@@ -46,14 +48,16 @@ export const FONT: {
     DEFAULT: '100%',
   },
   SIZE: {
-    XXXS: '9px',
-    XXS: '12px',
-    XS: '16px',
-    SM: '21.33px',
-    MD: '28.43px',
-    LG: '37.9px',
-    XL: '50.52px',
-    XXL: '67.34px',
-    DISPLAY: '89.76px',
+    XXXS: '0.75rem',
+    XXS: '0.875rem',
+    XS: '1rem',
+    SM: '1.25rem',
+    MD: '1.5rem',
+    LG: '2rem',
+    XL: '2.5rem',
+    XXL: '3rem ',
+    XXXL: '4rem',
+    DISPLAY: '5rem ',
+    GIANT: '6rem',
   },
-};
+};        

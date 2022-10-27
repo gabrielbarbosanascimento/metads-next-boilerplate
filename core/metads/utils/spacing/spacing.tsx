@@ -1,31 +1,35 @@
 type SPACING_TYPE = {
-  QUARCK: '4px';
-  NANO: '8px';
-  XXXS: '16px';
-  XXS: '24px';
-  XS: '32px';
-  SM: '40px';
-  MD: '48px';
-  LG: '56px';
-  XL: '64px';
-  XXL: '80px';
-  XXXL: '120px';
-  HUGE: '160px';
-  GIGANT: '200px';
+  QUARCK: '0.25rem';
+  NANO: '0.5rem';
+  MICRO: '0.75rem';
+  MINI: '1rem';
+  XXXS: '1.25rem';
+  XXS: '1.5rem';
+  XS: '2rem';
+  SM: '2.5rem';
+  MD: '3rem';
+  LG: '3.5rem';
+  XL: '4rem';
+  XXL: '5rem';
+  XXXL: '7.5rem';
+  HUGE: '10rem';
+  GIGANT: '12.5rem';
 };
 
 export const SPACING: SPACING_TYPE = {
-  QUARCK: '4px',
-  NANO: '8px',
-  XXXS: '16px',
-  XXS: '24px',
-  XS: '32px',
-  SM: '40px',
-  MD: '48px',
-  LG: '56px',
-  XL: '64px',
-  XXL: '80px',
-  XXXL: '120px',
-  HUGE: '160px',
-  GIGANT: '200px',
+  QUARCK: '0.25rem',
+  NANO: '0.5rem',
+  MICRO: '0.75rem',
+  MINI: '1rem',
+  XXXS: '1.25rem',
+  XXS: '1.5rem',
+  XS: '2rem',
+  SM: '2.5rem',
+  MD: '3rem',
+  LG: '3.5rem',
+  XL: '4rem',
+  XXL: '5rem',
+  XXXL: '7.5rem',
+  HUGE: '10rem',
+  GIGANT: '12.5rem',
 };

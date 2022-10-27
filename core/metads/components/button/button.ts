@@ -1,6 +1,14 @@
 import styled from 'styled-components';
 import { ColorHelper } from '../../../helpers';
-import { BORDER, SEMANTIC_COLORS, FONT, OPACITY_LEVEL, SPACING } from '../../utils';
+import {
+  BORDER,
+  SEMANTIC_COLORS,
+  FONT,
+  OPACITY_LEVEL,
+  SPACING,
+  CONTEXTUAL_COLORS,
+  CONTEXTUAL_COLORS_ALT,
+} from '../../utils';
 import { MetaIcon } from '../icon';
 
 interface MetaButtonProps
@@ -22,7 +30,7 @@ export const MetaButton = styled.button<MetaButtonProps>`
   background-color: transparent;
   color: ${SEMANTIC_COLORS.NEUTRAL.BLACK};
 
-  border-radius: ${BORDER.RADIUS.SM};
+  border-radius: ${BORDER.RADIUS.PILL};
   border-width: ${(props) =>
     props.borders ? BORDER.WIDTH.THIN : BORDER.WIDTH.NONE};
   font-size: ${FONT.SIZE.XS};
@@ -35,8 +43,7 @@ export const MetaButton = styled.button<MetaButtonProps>`
 
   cursor: pointer;
 
-  i,
-  ${MetaIcon} {
+  i {
     margin: 0 ${SPACING.NANO};
     color: inherit;
   }
@@ -44,85 +51,28 @@ export const MetaButton = styled.button<MetaButtonProps>`
   .disabled,
   :disabled,
   [disabled] {
+    opacity: ${OPACITY_LEVEL.MEDIUM};
     cursor: not-allowed;
-    color: rgba(0, 0, 0, ${OPACITY_LEVEL.MEDIUM});
-    background-color: rgba(0, 0, 0, ${OPACITY_LEVEL.SEMITRANSPARENT});
-
-    i,
-    ${MetaIcon} {
-      color: rgba(0, 0, 0, ${OPACITY_LEVEL.MEDIUM});
-    }
   }
 
   /* PRIMARY VARIANTS */
   &.primary {
-    /* PURE */
-    &,
-    &.pure {
-      background-color: ${SEMANTIC_COLORS.PRIMARY.PURE};
-      color: ${SEMANTIC_COLORS.NEUTRAL.WHITE};
+    background-color: ${CONTEXTUAL_COLORS.INTERACTIVE.PRIMARY};
+    color: ${CONTEXTUAL_COLORS_ALT.CONTENT.TITLE};
 
-      :not(.disabled),
-      :not([disabled]) {
-        :hover,
-        :focus-visible,
-        &.focus {
-          background-color: ${ColorHelper.hexToRGB(
-            SEMANTIC_COLORS.PRIMARY.PURE,
-            OPACITY_LEVEL.SEMIOPAQUE
-          )};
-        }
+    :not(.disabled),
+    :not([disabled]) {
+      :focus-visible,
+      &.focus {
+        outline: none;
+        box-shadow: 0 0 0 4px ${CONTEXTUAL_COLORS_ALT.HIGHTLIGHT.FOCUS};
       }
     }
-    /* LIGHT */
-    &.light {
-      background-color: ${SEMANTIC_COLORS.PRIMARY.LIGHT};
-      color: ${SEMANTIC_COLORS.NEUTRAL.BLACK};
 
-      :not(.disabled),
-      :not([disabled]) {
-        :hover,
-        :focus-visible,
-        &.focus {
-          background-color: ${ColorHelper.hexToRGB(
-            SEMANTIC_COLORS.PRIMARY.LIGHT,
-            OPACITY_LEVEL.SEMIOPAQUE
-          )};
-        }
-      }
-    }
-    /* MEDIUM */
-    &.medium {
-      background-color: ${SEMANTIC_COLORS.PRIMARY.MID};
-      color: ${SEMANTIC_COLORS.NEUTRAL.WHITE};
-
-      :not(.disabled),
-      :not([disabled]) {
-        :hover,
-        :focus-visible,
-        &.focus {
-          background-color: ${ColorHelper.hexToRGB(
-            SEMANTIC_COLORS.PRIMARY.MID,
-            OPACITY_LEVEL.SEMIOPAQUE
-          )};
-        }
-      }
-    }
-    /* DARK */
-    &.dark {
-      background-color: ${SEMANTIC_COLORS.PRIMARY.DARK};
-      color: ${SEMANTIC_COLORS.NEUTRAL.WHITE};
-
-      :not(.disabled),
-      :not([disabled]) {
-        :hover,
-        :focus-visible,
-        &.focus {
-          background-color: ${ColorHelper.hexToRGB(
-            SEMANTIC_COLORS.PRIMARY.DARK,
-            OPACITY_LEVEL.SEMIOPAQUE
-          )};
-        }
+    :not(.disabled),
+    :not([disabled]) {
+      :hover {
+        background-color: ${CONTEXTUAL_COLORS.INTERACTIVE.PRIMARY_HOVER};
       }
     }
   }

@@ -4,15 +4,15 @@ type RADIUS = {
   MD: '16px';
   LG: '24px';
   PILL: '500px';
-  CIRCULAR: '50%',
+  CIRCULAR: '50%';
 };
 
 type WIDTH = {
-  NONE: '0px';
-  HAIRLINE: '1px';
-  THIN: '2px';
-  THICK: '4px';
-  HEAVY: '8px';
+  NONE: '0rem';
+  HAIRLINE: '0.0625rem';
+  THIN: '0.125rem';
+  THICK: '0.25rem';
+  HEAVY: '0.5rem';
 };
 
 export const BORDER: {
@@ -28,10 +28,10 @@ export const BORDER: {
     CIRCULAR: '50%',
   },
   WIDTH: {
-    NONE: '0px',
-    HAIRLINE: '1px',
-    THIN: '2px',
-    THICK: '4px',
-    HEAVY: '8px',
+    NONE: '0rem',
+    HAIRLINE: '0.0625rem',
+    THIN: '0.125rem',
+    THICK: '0.25rem',
+    HEAVY: '0.5rem',
   },
 };
