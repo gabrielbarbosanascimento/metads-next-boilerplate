@@ -22,7 +22,7 @@ export default function Home() {
           transition={{ duration: 2, delay: 0.3 }}
           className="d-flex justify-content-center align-items-center"
         >
-          <MetaSubtitle>Gabriel Nascimento</MetaSubtitle>
+          <MetaSubtitle>Boilerplate</MetaSubtitle>
         </motion.div>
       </div>
     </div>
