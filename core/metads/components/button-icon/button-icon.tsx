@@ -14,7 +14,7 @@ export interface MetaButtonIconTypes
 export const MetaButtonIcon: React.FC<MetaButtonIconTypes> = (props) => {
   return (
     <ButtonIcon {...props}>
-      <MetaIcon name={props.name}></MetaIcon>
+      <MetaIcon>{props.name}</MetaIcon>
     </ButtonIcon>
   );
 };

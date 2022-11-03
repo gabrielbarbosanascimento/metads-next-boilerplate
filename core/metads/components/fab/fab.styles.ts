@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { BORDER, SEMANTIC_COLORS, OPACITY_LEVEL } from '../../utils';
 import { MetaFabTypes } from './fab';
 import { ColorHelper } from '../../../helpers';
-import { MetaIcon } from '../icon';
+import MetaIcon from '../icon/icon.styles';
 
 export default styled.button<MetaFabTypes>`
   height: 48px;

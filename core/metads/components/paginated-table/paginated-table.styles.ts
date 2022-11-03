@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { BORDER, SEMANTIC_COLORS, FONT, SPACING } from '../../utils';
-import { MetaIcon } from '../icon';
+import MetaIcon from '../icon/icon.styles';
 
 export default styled.div`
   position: relative;
